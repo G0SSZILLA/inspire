@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inspire</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="bg-image">
+
+    <div class="row container-fluid weather-row">
+        <div class="col-9"></div>
+        <div class="col-3" id="weather">
+        </div>
+    </div>
+
+    <div class="row container-fluid time-row">
+        <div class="col-6 m-auto text-center">
+            time
+        </div>
+    </div>
+
+    <div class="row container-fluid bottom-row">
+
+        <div class="col-3" id="image">
+            img info
+        </div>
+
+        <div class="col-6 text-center">
+            <div id="quote">
+                The Quote
+            </div>
+        </div>
+
+        <div class="col-3 text-right mr-0">
+            <div>
+                <!-- <div id="todo-error"></div> -->
+                <form onsubmit="app.todoController.addTodo(event)" class="form-inline">
+                    <!-- Material input -->
+                    <div class="md-form">
+                        <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2MD" name="description" placeholder="Todo List">
+                        <label class="sr-only" for="inlineFormInputName2MD">Name</label>
+                    </div>
+                    <button type="submit" class="btn btn-transparent border-dark mb-2">+</button>
+
+                </form>
+                <ul class="list-group list-group-flush">
+                    <div id="todos"></div>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <script type="module" src="app/main.js"></script>
+</body>
+
+</html>

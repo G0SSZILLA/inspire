@@ -1,0 +1,12 @@
+#todo-error {
+    color: red;
+    font-size: 2em;
+}
+
+.weather-row {
+    height: 150px;
+}
+
+.time-row {
+    height: 400px;
+}
