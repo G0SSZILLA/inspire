@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="bg-image">
+<body>
+
 
     <div class="row container-fluid weather-row">
         <div class="col-9"></div>
@@ -36,7 +37,7 @@
             </div>
         </div>
 
-        <div class="col-3 text-right mr-0">
+        <div class="col-3 text-right mr-0 ">
             <div>
                 <!-- <div id="todo-error"></div> -->
                 <form onsubmit="app.todoController.addTodo(event)" class="form-inline">
@@ -46,15 +47,17 @@
                         <label class="sr-only" for="inlineFormInputName2MD">Name</label>
                     </div>
                     <button type="submit" class="btn btn-transparent border-dark mb-2">+</button>
+                    <p id="numTodos"></p>
 
                 </form>
-                <ul class="list-group list-group-flush">
+                <ul class="list-group list-group-flush bg-transparent">
                     <div id="todos"></div>
                 </ul>
             </div>
         </div>
 
     </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script type="module" src="app/main.js"></script>

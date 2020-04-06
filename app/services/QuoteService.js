@@ -14,7 +14,10 @@ class QuoteService {
     async getQuote() {
         console.log("inspiration");
         let res = await _quoteApi.get();
-        store.commit("quote", new Quote(res.data));
+        console.log('quote', res.data);
+
+        let quote = new Quote(res.data.quote)
+        store.commit("quote", quote);
     }
 }
 

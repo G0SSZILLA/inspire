@@ -5,7 +5,8 @@ import store from "../store.js";
 
 
 function drawImage() {
-    document.getElementById('bg-image').innerHTML = store.State.image.Template
+    document.body.style.backgroundImage = `url(${ store.State.image.large_url})`
+    document.body.classList.add('bg-image')
 }
 export default class ImageController {
     constructor() {

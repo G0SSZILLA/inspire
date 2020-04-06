@@ -4,7 +4,7 @@ import store from "../store.js";
 
 function drawQuote() {
     document.getElementById('quote').innerHTML = store.State.quote.Template
-    console.log("THE QUOTE MAN SAYS:", store.State.Quotes)
+    console.log("THE QUOTE MAN SAYS:", store.State.quote)
 }
 //TODO Create methods for constructor, and rendering the quote to the page
 //      (be sure to review the HTML as an element already was put there for you)

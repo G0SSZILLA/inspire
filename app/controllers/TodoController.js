@@ -9,6 +9,7 @@ function _drawTodos() {
 
     todos.forEach(todo => template += todo.Template)
     document.getElementById('todos').innerHTML = template
+    document.getElementById('numTodos').innerHTML = `<p>Tasks: ${todos.length}</p>`
 }
 
 export default class TodoController {
@@ -29,6 +30,7 @@ export default class TodoController {
         };
         TodoService.addTodoAsync(todo);
     }
+
 
     //NOTE This method will pass an Id to your service for the TODO that will need to be toggled
     toggleTodoStatus(todoId) {

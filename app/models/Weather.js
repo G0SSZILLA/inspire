@@ -10,12 +10,13 @@ export default class Weather {
 
         this.city = data.name
         this.kelvin = data.main.temp
+        this.temp = this.getTemp(data.main.temp)
     }
 
     get Template() {
         return /*html*/ `
          <!-- Card -->
-         <div class="card weather-card ">
+         <div class="card weather-card bg-transparent text-black border-0 ">
          <!-- Card content -->
          <div class="card-body pb-3 ">
              <!-- Title -->
@@ -23,7 +24,7 @@ export default class Weather {
              <!-- Text -->
              <p class="card-text">Mon, 12:30 PM, Mostly Sunny</p>
              <div class="d-flex justify-content-between">
-                 <p class="display-1 degree ">${this.kelvin}</p>
+                 <p class="display-1 degree ">${this.temp}</p>
                  <i class="fas fa-sun-o fa-5x pt-3 amber-text"></i>
              </div>
 </div>
@@ -35,4 +36,10 @@ export default class Weather {
       
       `
     }
+
+    getTemp(temp) {
+        return Math.floor((temp - 273.15) * 9 / 5 + 32)
+
+    }
+
 }

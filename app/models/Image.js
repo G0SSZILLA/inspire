@@ -11,12 +11,9 @@ export default class Image {
     }
 
 
-    get Template() {
-        return /*html*/ `
-<img src="${this.large_url}" alt=""/>
-`
-
-
-
-    }
+    //     get Template() {
+    //         return /*html*/ `
+    // <img src="${this.large_url}" class='bg-image'>
+    // `
+    //     }
 }
